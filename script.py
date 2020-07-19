@@ -43,7 +43,7 @@ def base(myurl, auth_status):
     print(len(all_vacansu))
     i, j, k = 0, 0, 0
 
-    while i < int(1):
+    while i < int(last_page):
 
         i = i + 1  # номер текущей страницы парсинга
         for vacansu in all_vacansu:
@@ -83,13 +83,13 @@ def base(myurl, auth_status):
 
     #print(last_page)
     print("count_error {}".format(k))
-
-
+    print("count good vacancy {}".format(j))
 
 
 if __name__ == '__main__':
     auth_status = 1
     #url = 'https://hh.ru/search/vacancy?clusters=true&enable_snippets=true&resume=55273996ff07e206ce0039ed1f5761364e5042&specialization=1&showClusters=true'
     #url = 'https://hh.ru/search/vacancy?clusters=true&enable_snippets=true&resume=55273996ff07e206ce0039ed1f5761364e5042&specialization=1&only_with_salary=true&salary=220000&from=cluster_compensation&showClusters=false'
-    url = 'https://hh.ru/search/vacancy?clusters=true&specialization=1&resume=55273996ff07e206ce0039ed1f5761364e5042&enable_snippets=true&salary=&st=searchVacancy&fromSearch=true&text=Python+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&from=suggest_post'
+    #url = 'https://hh.ru/search/vacancy?clusters=true&specialization=1&resume=55273996ff07e206ce0039ed1f5761364e5042&enable_snippets=true&salary=&st=searchVacancy&fromSearch=true&text=Python+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&from=suggest_post'
+    url = 'https://hh.ru/search/vacancy?resume=55273996ff07e206ce0039ed1f5761364e5042&from=resumelist'
     base(url, auth_status)
