@@ -64,14 +64,15 @@ def base(myurl, auth_status):
 
 
         # блок перехода на следующую страницу
-        # try:
-        #     page = driver.find_element_by_xpath(
-        #         '//a[@data-qa="pager-next"]')  # Для перехода на след страницу (кроме последней!)
-        #     page.click()
-        #     driver.implicitly_wait(5)
-        #     window_before = driver.window_handles[0]
-        # except:
-        #     print('last page done')
+
+        try:
+            page = driver.find_element_by_xpath(
+                '/html/body/div[6]/div/div/div/div[2]/div/div[4]/div/div[2]/div/div[8]/div/a')  # Для перехода на след страницу (кроме последней!)
+            print(page)
+            page.click()
+            driver.implicitly_wait(5)
+        except:
+            print('last page done')
 
         all_vacansu = driver.find_elements_by_xpath(
             '//a[@class="bloko-link bloko-link_dimmed HH-VacancyResponsePopup-Link"]')
@@ -81,7 +82,7 @@ def base(myurl, auth_status):
             print(i)
 
     #print(last_page)
-    print("count_error{}".format(k))
+    print("count_error {}".format(k))
 
 
 
