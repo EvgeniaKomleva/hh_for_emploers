@@ -114,5 +114,6 @@ if __name__ == '__main__':
     #url = 'https://hh.ru/search/vacancy?clusters=true&specialization=1&resume=55273996ff07e206ce0039ed1f5761364e5042&enable_snippets=true&salary=&st=searchVacancy&fromSearch=true&text=Python+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&from=suggest_post'
     #url = 'https://hh.ru/search/vacancy?resume=55273996ff07e206ce0039ed1f5761364e5042&from=resumelist'
     #url = 'https://hh.ru/search/vacancy?area=1&clusters=true&enable_snippets=true&search_field=name&text=data+scientist&experience=noExperience&from=cluster_experience&showClusters=true'
-    url = 'https://hh.ru/vacancies/data-scientist'
+    #url = 'https://hh.ru/vacancies/data-scientist'
+    url = 'https://hh.ru/search/vacancy?clusters=true&area=1&enable_snippets=true&salary=&st=searchVacancy&fromSearch=true&text=Python+%D1%81%D1%82%D0%B0%D0%B6%D0%B5%D1%80&from=suggest_post'
     base(url, auth_status)
